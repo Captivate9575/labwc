@@ -1,0 +1,83 @@
+
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+  <core>
+    <gap>5</gap>
+  </core>
+
+  <theme>
+    <name>gruvbox-openbox</name>
+    <cornerRadius>7</cornerRadius>
+    <font name="monospace" size="10" />
+  </theme>
+
+  <keyboard>
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+    <keybind key="W-Left">
+      <action name="SnapToEdge" direction="left" />
+    </keybind>
+    <keybind key="W-Right">
+      <action name="SnapToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-Up">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="W-R">
+      <action name="Execute" command="tofi-drun" />
+    </keybind>
+    <keybind key="A-F4">
+      <action name="Close" />
+    </keybind>
+    <!--
+    <keybind key="W-R">
+      <action name="Reconfigure" />
+    </keybind>
+    -->
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+    <!--
+      Remove a previously defined keybind
+      A shorter alternative is <keybind key="W-F4" />
+    -->
+    <keybind key="W-F4">
+      <action name="None" />
+    </keybind>
+  </keyboard>
+
+  <mouse>
+    <default />
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="some-custom-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+
+  <libinput>
+    <device category="Logitech G305">
+      <naturalScroll>no</naturalScroll>
+      <leftHanded>no</leftHanded>
+      <pointerSpeed>0</pointerSpeed>
+      <accelProfile>flat</accelProfile>
+      <tap>no</tap>
+      <tapButtonMap>no</tapButtonMap>
+      <middleEmulation>no</middleEmulation>
+      <disableWhileTyping>no</disableWhileTyping>
+    </device>
+  </libinput>
+</labwc_config>
